@@ -1,0 +1,118 @@
+$gutter: 10px;
+$max-width-large: 920px;
+$max-width-extra-large: 1080px;
+
+// screen break points
+$break-point-mobile: 576px;
+$break-point-tablet: 768px;
+$break-point-desktop: 992px;
+$break-point-desktop-large: 1200px;
+
+$media-screen-extra-small: '(max-width: #{$break-point-mobile - 1})';
+$media-screen-small: '(min-width: #{$break-point-mobile})';
+$media-screen-medium: '(min-width: #{$break-point-tablet})';
+$media-screen-large: '(min-width: #{$break-point-desktop})';
+$media-screen-extra-large: '(min-width: #{$break-point-desktop-large})';
+
+$media-screen-smallest: '(max-width: #{$break-point-mobile - 1})';
+$media-screen-mobile: '(max-width: #{$break-point-tablet - 1})';
+$media-screen-tablet: '(min-width: #{$break-point-tablet}) and (max-width: #{$break-point-desktop - 1})';
+$media-screen-desktop: '(min-width: #{$break-point-desktop})';
+$media-screen-desktop-large: '(min-width: #{$break-point-desktop-large})';
+
+.todo {
+  &__container {
+    width: 100%;
+    padding-right: $gutter;
+    padding-left: $gutter;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1100px;
+  }
+
+  &__heading {
+    border-bottom: 1px solid #E5E9F0;
+    padding-bottom: 20px;
+  }
+
+  &__input {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  &__control {
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    &-item {
+      float: left;
+    }
+  }
+
+  &__add {
+    margin-left: 22px;
+    width: 300px;
+    height: 45px;
+    background-color: #7b5eda;
+  }
+
+  &__sort {
+    margin-left: 81px;
+    height: 45px;
+    width: 300px;
+    font-size: 20px;
+  }
+
+  &__section {
+    text-align: right;
+    display: inherit;
+    margin-top: 20px;
+  }
+
+  &__input-add {
+    height: 30px;
+    width: 300px;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+
+  &__input-choose {
+    height: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+
+  &__button-search {
+    height: 45px;
+  }
+
+  &__list {
+    background-color: pink;
+    border-radius: 4px;
+    padding-left: 20px;
+    height: 30px;
+    padding-top: 12px;
+    margin-top: 40px;
+  }
+
+  &__header {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 12% 40% 15% 33%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
