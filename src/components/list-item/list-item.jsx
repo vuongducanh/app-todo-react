@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './list-item.scss';
+import FlipMove from "react-flip-move";
 
 class ListItem extends Component {
 
@@ -33,7 +34,9 @@ class ListItem extends Component {
   render() {
     return (
       <div>
+        <FlipMove duration={250} easing="ease-out">
         {this.itemsResult()}
+        </FlipMove>
       </div>
     );
   }
