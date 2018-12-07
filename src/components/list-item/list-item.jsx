@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './list-item.scss';
 import FlipMove from "react-flip-move";
+import Button  from '@material-ui/core/Button';
+
 
 class ListItem extends Component {
 
@@ -23,8 +25,8 @@ class ListItem extends Component {
         <div className="list-item-task">{item.value}</div>
         <div className="list-item-level">{item.level}</div>
         <div className="list-item-action">
-          <div className="list-item-edit" onClick={() => this.handleEdit(item, index)}>Edit</div>
-          <div className="list-item-remove" onClick={() => this.deleteItem(item.key)}>Delete</div>
+        <Button variant="contained"  color="primary" onClick={() => this.handleEdit(item, index)} className="list-item-edit">Edit </Button>
+        <Button variant="contained" color="secondary" onClick={() => this.deleteItem(item.key)} className="list-item-remove"> Delete </Button>
         </div>
       </div>
     )
@@ -34,7 +36,7 @@ class ListItem extends Component {
   render() {
     return (
       <div>
-        <FlipMove duration={250} easing="ease-out">
+        <FlipMove duration={350} easing="ease-out">
         {this.itemsResult()}
         </FlipMove>
       </div>

@@ -5,6 +5,7 @@
     grid-template-columns: 12% 40% 15% 33%;
     border-bottom: 1px solid #000;
     padding-bottom: 20px;
+    align-items: center;
 
     &-action {
       display: flex;
@@ -16,20 +17,6 @@
     }
 
     &-edit {
-      background-color: yellow;
-      width: 60px;
-      height: 26px;
-      border: 1px solid #000;
-      text-align: center;
-      line-height: 26px;
-      margin-right: 20px;
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
-    &-remove {
-      @extend  .list-item-edit;
-      background-color: red;
+     margin-right: 20px !important;
     }
 }
